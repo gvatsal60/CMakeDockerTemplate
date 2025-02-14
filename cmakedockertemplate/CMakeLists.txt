@@ -1,5 +1,5 @@
 # Set minimum required CMake version
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.25)
 
 # Set project name and version
 set(PROJECT_NAME cmakeTemplate)
