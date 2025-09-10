@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://img.shields.io/github/license/gvatsal60/CMakeDockerTemplate)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/gvatsal60/CMakeDockerTemplate/c-cpp.yml)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/gvatsal60/CMakeDockerTemplate/master.svg)](https://results.pre-commit.ci/latest/github/gvatsal60/CMakeDockerTemplate/master)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gvatsal60_CMakeDockerTemplate&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=gvatsal60_CMakeDockerTemplate)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gvatsal60_CMakeTemplateDocker&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=gvatsal60_CMakeTemplateDocker)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9f5b3fe91d274b44a542bffee8601e16)](https://app.codacy.com/gh/gvatsal60/CMakeDockerTemplate/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/gvatsal60/cmakedockertemplate/badge)](https://www.codefactor.io/repository/github/gvatsal60/cmakedockertemplate)
 ![GitHub pull-requests](https://img.shields.io/github/issues-pr/gvatsal60/CMakeDockerTemplate)
