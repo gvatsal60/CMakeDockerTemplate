@@ -11,22 +11,19 @@
       "extensions": [
         "DavidAnson.vscode-markdownlint",
         "Gruntfuggly.todo-tree",
-        "PKief.material-icon-theme",
         "SonarSource.sonarlint-vscode",
         "Tyriar.sort-lines",
         "bradzacher.vscode-copy-filename",
         "esbenp.prettier-vscode",
         "foxundermoon.shell-format",
-        "gurumukhi.selected-lines-count",
-        "mads-hartmann.bash-ide-vscode",
+        "ms-azuretools.vscode-docker",
         "streetsidesoftware.code-spell-checker",
-        "timonwong.shellcheck",
         "usernamehw.errorlens"
       ],
       "settings": {
         "[dockercompose]": {
           "editor.autoIndent": "advanced",
-          "editor.defaultFormatter": "ms-azuretools.vscode-docker",
+          "editor.defaultFormatter": "ms-azuretools.vscode-containers",
           "editor.insertSpaces": true,
           "editor.quickSuggestions": {
             "comments": false,
@@ -36,7 +33,7 @@
           "editor.tabSize": 2
         },
         "[dockerfile]": {
-          "editor.defaultFormatter": "ms-azuretools.vscode-docker",
+          "editor.defaultFormatter": "ms-azuretools.vscode-containers",
           "editor.quickSuggestions": {
             "strings": true
           }
@@ -56,7 +53,6 @@
         "editor.tabSize": 2,
         "editor.trimAutoWhitespace": true,
         "explorer.confirmDelete": false,
-        "extensions.autoUpdate": true,
         "extensions.ignoreRecommendations": true,
         "files.associations": {
           "*.code-snippets": "jsonc"
@@ -73,8 +69,6 @@
           "**/bower_components": true,
           "**/node_modules": true
         },
-        "windows.title": "${folderPath}",
-        "workbench.iconTheme": "material-icon-theme",
         "workbench.startupEditor": "none"
       }
     }
