@@ -1,5 +1,6 @@
 # CMakeDockerTemplate
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f2e871e7fb644925b1a05773fe548dcc)](https://app.codacy.com/gh/gvatsal60/CMakeDockerTemplate?utm_source=github.com&utm_medium=referral&utm_content=gvatsal60/CMakeDockerTemplate&utm_campaign=Badge_Grade)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://img.shields.io/github/license/gvatsal60/CMakeDockerTemplate)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/gvatsal60/CMakeDockerTemplate/c-cpp.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gvatsal60_CMakeDockerTemplate&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=gvatsal60_CMakeDockerTemplate)
