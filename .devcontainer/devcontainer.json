@@ -73,7 +73,6 @@
       }
     }
   },
-  "features": {},
   "mounts": [
     "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached,readonly"
   ],
