@@ -11,6 +11,7 @@ template <typename T> static void MemClean(const T *const arg) {
 
 template <typename T> static void MemArrClean(const T *const arg) {
   assert(arg != nullptr);
+  delete[] arg;
 }
 
 #endif
