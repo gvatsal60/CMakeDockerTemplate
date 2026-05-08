@@ -86,7 +86,6 @@
   "runArgs": [
     "--rm",
     "--name=vsc-${localEnv:USER}-${containerWorkspaceFolderBasename}-${devcontainerId}",
-    "--cap-add=SYS_PTRACE",
     "--security-opt",
     "seccomp=unconfined"
   ]

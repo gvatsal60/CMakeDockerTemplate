@@ -1,17 +1,17 @@
 name: Build Project
-
+permissions:
+  contents: read
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "*" ]
-
+    branches: ["*"]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Build
-      run: make build
-    # - name: Test
-    #   run: make docker-test
+      - uses: actions/checkout@v6
+      - name: Build
+        run: make build
+      - name: Test
+        run: make test
