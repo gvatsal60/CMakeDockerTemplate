@@ -8,17 +8,13 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "DavidAnson.vscode-markdownlint",
         "Gruntfuggly.todo-tree",
-        "PKief.material-icon-theme",
         "SonarSource.sonarlint-vscode",
         "Tyriar.sort-lines",
         "bradzacher.vscode-copy-filename",
-        "esbenp.prettier-vscode",
-        "gurumukhi.selected-lines-count",
         "llvm-vs-code-extensions.vscode-clangd",
         "ms-azuretools.vscode-docker",
-        "ms-vscode.cpptools",
+        "ms-vscode.cpp-devtools",
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens"
       ],
@@ -33,7 +29,6 @@
         "clangd.inactiveRegions.useBackgroundHighlight": true,
         "editor.bracketPairColorization.enabled": true,
         "editor.comments.insertSpace": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.detectIndentation": false,
         "editor.insertSpaces": true,
         "editor.snippetSuggestions": "top",
@@ -71,13 +66,9 @@
           "REMOVE"
         ],
         "windows.title": "${folderPath}",
-        "workbench.iconTheme": "material-icon-theme",
         "workbench.startupEditor": "none"
       }
     }
-  },
-  "features": {
-    "ghcr.io/gvatsal60/dev-container-features/sonarlint": {}
   },
   "mounts": [
     "source=${localWorkspaceFolder:-./}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached,readonly"
@@ -85,8 +76,6 @@
   "postCreateCommand": "chmod +x ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh && ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh",
   "runArgs": [
     "--rm",
-    "--name=vsc-${localEnv:USER}-${containerWorkspaceFolderBasename}-${devcontainerId}",
-    "--security-opt",
-    "seccomp=unconfined"
+    "--name=vsc-${localEnv:USER}-${containerWorkspaceFolderBasename}-${devcontainerId}"
   ]
 }
