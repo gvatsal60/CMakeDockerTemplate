@@ -8,33 +8,31 @@ DOCKER_BUILD_CMD := $(DOCKER_HOST) image build -t $(DOCKER_IMG_NAME) -f $(DOCKER
 DOCKER_RUN_CMD := $(DOCKER_HOST) container run $(DOCKER_ARG) $(DOCKER_IMG_NAME)
 
 # Define the default target
-.PHONY: all build test clean run sonar
+.PHONY: all debug release test clean run
 
 # Targets
-all: clean build
+all: clean debug
 
 # Target: build_img
-# Description: Builds the Docker image using the specified Dockerfile=
 build_img:
 	@$(DOCKER_BUILD_CMD)
 
-# Code Build
-build: build_img
-	@$(DOCKER_RUN_CMD) $(CMAKE_BUILD_CMD)
-	@$(DOCKER_RUN_CMD) $(MAKE_BUILD_CMD)
+# Debug Build
+debug: build_img
+	@$(DOCKER_RUN_CMD) $(DEBUG_CMD)
+
+# Release Build
+release: build_img
+	@$(DOCKER_RUN_CMD) $(RELEASE_CMD)
 
 # Test code
-test: build
+test: debug
 	@$(DOCKER_RUN_CMD) $(TEST_CMD)
 
 # Run code
-run: build
+run: debug
 	@$(DOCKER_RUN_CMD) $(RUN_CMD)
 
 # Clean
 clean: build_img
 	@$(DOCKER_RUN_CMD) $(CLEAN_CMD)
-
-# Sonar
-sonar: clean build
-	@$(DOCKER_RUN_CMD) $(SONAR_CMD)

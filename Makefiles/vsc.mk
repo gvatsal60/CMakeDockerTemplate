@@ -2,21 +2,21 @@ include cfg/.env
 include Makefiles/rules.mk
 
 # Targets
-.PHONY: build test clean run sonar
+.PHONY: all debug release test clean run
 
-all: clean build
+all: clean debug
 
-build:
-	@$(BUILD_CMD)
+debug:
+	@$(DEBUG_CMD)
 
-test: build
+release:
+	@$(RELEASE_CMD)
+
+test: debug
 	@$(TEST_CMD)
 
-run: build
+run: debug
 	@$(RUN_CMD)
 
 clean:
 	@$(CLEAN_CMD)
-
-sonar: clean build
-	@$(SONAR_CMD)
