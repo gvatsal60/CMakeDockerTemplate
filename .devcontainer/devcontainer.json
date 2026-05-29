@@ -8,7 +8,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "Gruntfuggly.todo-tree",
         "SonarSource.sonarlint-vscode",
         "Tyriar.sort-lines",
         "bradzacher.vscode-copy-filename",
@@ -23,7 +22,7 @@
           "C_Cpp.autocompleteAddParentheses": true,
           "C_Cpp.codeAnalysis.clangTidy.enabled": true,
           "C_Cpp.intelliSenseEngine": "default",
-          "editor.defaultFormatter": "ms-vscode.cpptools"
+          "editor.defaultFormatter": "ms-vscode.cpp-devtools"
         },
         "clangd.checkUpdates": true,
         "clangd.inactiveRegions.useBackgroundHighlight": true,
@@ -54,24 +53,14 @@
           "**/bower_components": true,
           "**/node_modules": true
         },
-        "sonarlint.pathToCompileCommands": "${containerWorkspaceFolder}/compile_commands.json",
-        "todo-tree.general.tags": [
-          "BUG",
-          "HACK",
-          "FIXME",
-          "TODO",
-          "XXX",
-          "[ ]",
-          "[x]",
-          "REMOVE"
-        ],
+        "sonarlint.pathToCompileCommands": "${containerWorkspaceFolder}/build/compile_commands.json",
         "windows.title": "${folderPath}",
         "workbench.startupEditor": "none"
       }
     }
   },
   "mounts": [
-    "source=${localWorkspaceFolder:-./}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached,readonly"
+    "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached,readonly"
   ],
   "postCreateCommand": "chmod +x ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh && ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh",
   "runArgs": [
