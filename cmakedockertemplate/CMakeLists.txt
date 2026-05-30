@@ -48,5 +48,6 @@ add_executable(${EXEC_BIN_NAME} ${SOURCE_FILES})
 target_include_directories(${EXEC_BIN_NAME} PRIVATE ${INC})
 target_link_libraries(${EXEC_BIN_NAME} PUBLIC ${REQUIRED_LIB})
 
-# Add the 'test' subdirectory for testing
+# Enable testing and add the 'test' subdirectory
+enable_testing()
 add_subdirectory(test)

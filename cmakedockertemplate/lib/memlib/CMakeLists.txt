@@ -1,12 +1,11 @@
-cmake_minimum_required(VERSION 3.4...3.28)
+cmake_minimum_required(VERSION 3.25)
 
 set(INC inc)
 set(SRC src)
-set(LIB_SRC lib_src)
-set(LIB_NAME memlib) # Change according to library name
+set(LIB_NAME memlib)
 
-file(GLOB ${LIB_SRC} ${SRC}/*.cpp)
+file(GLOB LIB_SRC "${SRC}/*.cpp")
 
-add_library(${LIB_NAME} ${${LIB_SRC}})
+add_library(${LIB_NAME} ${LIB_SRC})
 
 target_include_directories(${LIB_NAME} PUBLIC ${INC})

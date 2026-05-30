@@ -1,30 +1,19 @@
-# Set minimum required CMake version
 cmake_minimum_required(VERSION 3.25)
 
-# Enable testing for the project
-enable_testing()
-
-# Locate GTest package
 find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS})
+find_package(Threads REQUIRED)
 
-# Include directories for project headers
-set(INC ../inc)
-include_directories(${INC})
-
-# Set sources for the test executable
 set(TEST_BIN_NAME testBin)
 set(TEST_SRC_DIR src)
-file(GLOB TEST_SOURCES ${TEST_SRC_DIR}/*.cpp)
+file(GLOB TEST_SOURCES "${TEST_SRC_DIR}/*.cpp")
 
-# Check if any source files were found
 if(NOT TEST_SOURCES)
   message(FATAL_ERROR "No test source files found in ${TEST_SRC_DIR}")
 endif()
 
-# Create the test executable
 add_executable(${TEST_BIN_NAME} ${TEST_SOURCES})
 
-# Link with GTest and your project's libraries
-target_link_libraries(${TEST_BIN_NAME} ${GTEST_BOTH_LIBRARIES} memlib
-                      Threads::Threads)
+target_include_directories(${TEST_BIN_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/inc)
+target_link_libraries(${TEST_BIN_NAME} PRIVATE GTest::gtest_main memlib Threads::Threads)
+
+add_test(NAME UnitTests COMMAND ${TEST_BIN_NAME})

@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Build
-        run: make build
+        run: make debug
       - name: Test
         run: make test

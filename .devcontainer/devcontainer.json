@@ -1,7 +1,6 @@
 {
   "build": {
-    "context": "${localWorkspaceFolder}/dockerfiles",
-    "dockerfile": "${localWorkspaceFolder}/dockerfiles/Dockerfile.debug"
+    "dockerfile": "../dockerfiles/Dockerfile.debug"
   },
   "capAdd": [
     "SYS_PTRACE"
@@ -9,43 +8,23 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "DavidAnson.vscode-markdownlint",
-        "Gruntfuggly.todo-tree",
         "SonarSource.sonarlint-vscode",
         "Tyriar.sort-lines",
         "bradzacher.vscode-copy-filename",
-        "esbenp.prettier-vscode",
-        "foxundermoon.shell-format",
+        "llvm-vs-code-extensions.vscode-clangd",
         "ms-azuretools.vscode-docker",
+        "ms-vscode.cpp-devtools",
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens"
       ],
       "settings": {
-        "[dockercompose]": {
-          "editor.autoIndent": "advanced",
-          "editor.defaultFormatter": "ms-azuretools.vscode-containers",
-          "editor.insertSpaces": true,
-          "editor.quickSuggestions": {
-            "comments": false,
-            "other": true,
-            "strings": true
-          },
-          "editor.tabSize": 2
+        "[cpp]": {
+          "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
         },
-        "[dockerfile]": {
-          "editor.defaultFormatter": "ms-azuretools.vscode-containers",
-          "editor.quickSuggestions": {
-            "strings": true
-          }
-        },
-        "[shellscript]": {
-          "editor.defaultFormatter": "foxundermoon.shell-format",
-          "editor.tabSize": 4,
-          "files.eol": "\n"
-        },
+        "clangd.checkUpdates": true,
+        "clangd.inactiveRegions.useBackgroundHighlight": true,
         "editor.bracketPairColorization.enabled": true,
         "editor.comments.insertSpace": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.detectIndentation": false,
         "editor.insertSpaces": true,
         "editor.snippetSuggestions": "top",
@@ -53,6 +32,7 @@
         "editor.tabSize": 2,
         "editor.trimAutoWhitespace": true,
         "explorer.confirmDelete": false,
+        "extensions.autoUpdate": true,
         "extensions.ignoreRecommendations": true,
         "files.associations": {
           "*.code-snippets": "jsonc"
@@ -62,6 +42,7 @@
         "files.exclude": {
           "**/.vscode": true
         },
+        "files.trimTrailingWhitespace": true,
         "search.exclude": {
           "**/*.code-search": true,
           "**/*.git": true,
@@ -69,6 +50,7 @@
           "**/bower_components": true,
           "**/node_modules": true
         },
+        "sonarlint.pathToCompileCommands": "${containerWorkspaceFolder}/build/compile_commands.json",
         "workbench.startupEditor": "none"
       }
     }
