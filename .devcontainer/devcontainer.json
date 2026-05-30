@@ -19,10 +19,7 @@
       ],
       "settings": {
         "[cpp]": {
-          "C_Cpp.autocompleteAddParentheses": true,
-          "C_Cpp.codeAnalysis.clangTidy.enabled": true,
-          "C_Cpp.intelliSenseEngine": "default",
-          "editor.defaultFormatter": "ms-vscode.cpp-devtools"
+          "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
         },
         "clangd.checkUpdates": true,
         "clangd.inactiveRegions.useBackgroundHighlight": true,
@@ -54,7 +51,6 @@
           "**/node_modules": true
         },
         "sonarlint.pathToCompileCommands": "${containerWorkspaceFolder}/build/compile_commands.json",
-        "windows.title": "${folderPath}",
         "workbench.startupEditor": "none"
       }
     }
