@@ -1,0 +1,4 @@
+merge_protections_settings:
+  auto_merge_conditions:
+    - author = pre-commit-ci[bot]
+    - author = dependabot[bot]
